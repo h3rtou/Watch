@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.media.MediaView?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="dev.heitor.watch.controllers.VideoPlayerController"
+            prefHeight="810.0" prefWidth="1440.0">
+
+    <left>
+        <VBox>
+            <Label text="teste"/>
+            <Label text="teste"/>
+            <Label text="teste"/>
+            <Label text="teste"/>
+            <Label text="teste"/>
+            <Label text="teste"/>
+        </VBox>
+    </left>
+    <center>
+        <StackPane>
+            <MediaView fx:id="mediaView" fitWidth="720" fitHeight="405"/>
+        </StackPane>
+    </center>
+    <right>
+        <Label text="teste"/>
+        <Label text="teste"/>
+        <Label text="teste"/>
+        <Label text="teste"/>
+    </right>
+
+</BorderPane>
