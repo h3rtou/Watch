@@ -1,37 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.media.MediaView?>
-<BorderPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="dev.heitor.watch.controllers.VideoPlayerController"
-            prefHeight="810.0" prefWidth="1440.0">
 
-    <left>
-        <VBox>
-            <Label text="teste"/>
-            <Label text="teste"/>
-            <Label text="teste"/>
-            <Label text="teste"/>
-            <Label text="teste"/>
-            <Label text="teste"/>
-        </VBox>
-    </left>
+<?import javafx.scene.layout.StackPane?>
+<BorderPane prefHeight="810.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.heitor.watch.controllers.VideoPlayerController">
+    <top>
+        <HBox style="-fx-padding: 10;">
+
+            <Button onAction="#toggleListContentPane" prefHeight="35.0" prefWidth="35.0" text=""/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button onAction="#toggleConfigPane" prefHeight="35.0" prefWidth="35.0" text=""/>
+
+        </HBox>
+    </top>
     <center>
-        <StackPane>
-            <MediaView fx:id="mediaView" fitWidth="720" fitHeight="405"/>
+        <StackPane style="-fx-border-color: #000000;">
+            <MediaView fx:id="mediaView" fitHeight="540" fitWidth="960"/>
+            <HBox fx:id="mediaControlPane" style="-fx-border-color: #000000;" alignment="BOTTOM_CENTER">
+                <Button fx:id="playPauseButton" prefHeight="25.0" prefWidth="25.0" text=""/>
+            </HBox>
         </StackPane>
     </center>
+    <left>
+      <ScrollPane fx:id="leftPane" prefWidth="200" style="-fx-border-color: #000000;">
+          <VBox fx:id="listContentPane">
+          </VBox>
+      </ScrollPane>
+    </left>
     <right>
-        <Label text="teste"/>
-        <Label text="teste"/>
-        <Label text="teste"/>
-        <Label text="teste"/>
+      <ScrollPane fx:id="rightPane" prefWidth="200" style="-fx-border-color: #000000;">
+          <VBox fx:id="configPane">
+              <Label text="Text" />
+              <Label text="Text" />
+              <Label text="Text" />
+              <Label text="Text" />
+              <Label text="Text" />
+              <Label text="Text" />
+              <Label text="Text" />
+              <Label text="Text" />
+              <Label text="Text" />
+              <Label text="Text" />
+              <Label text="Text" />
+              <Label text="Text" />
+              <Label text="Text" />
+              <Label text="Text" />
+              <Label text="Text" />
+              <Label text="Text" />
+              <Label text="Text" />
+              <Label text="Text" />
+              <Label text="Text" />
+              <Label text="Text" />
+              <Label text="Text" />
+              <Label text="Text" />
+              <Label text="Text" />
+              <Label text="Text" />
+              <Label text="Text" />
+              <Label text="Text" />
+              <Label text="Text" />
+              <Label text="Text" />
+          </VBox>
+      </ScrollPane>
     </right>
 
 </BorderPane>
